@@ -230,6 +230,44 @@ if (heroImage) {
 }
 
 // ============================================
+// Animated Counter for Statistics
+// ============================================
+const animateCounter = (element, target, duration = 2000) => {
+    const start = 0;
+    const increment = target / (duration / 16); // 60fps
+    let current = start;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = Math.ceil(target);
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.ceil(current);
+        }
+    }, 16);
+};
+
+// Trigger counter animation when stats come into view
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                animateCounter(stat, target);
+            });
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const trustStats = document.querySelector('.trust-stats');
+if (trustStats) {
+    statsObserver.observe(trustStats);
+}
+
+// ============================================
 // Console Welcome Message
 // ============================================
 console.log('%c👋 Welcome to ProServicePicks!', 'font-size: 20px; font-weight: bold; color: #1dbf73;');
