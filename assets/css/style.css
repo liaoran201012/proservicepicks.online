@@ -114,7 +114,8 @@ img {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
-}
+
+    display: none; /* 隐藏披露条 */}
 
 .disclosure-bar::before {
     content: '';
@@ -675,7 +676,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 30px;
     text-align: center;
-    font-size: 13px;
+    font-size: 11px;
     color: rgba(255, 255, 255, 0.5);
     max-width: 900px;
     margin: 0 auto;
@@ -786,7 +787,8 @@ footer {
     .disclosure-bar {
         font-size: 12px;
         padding: 10px 16px;
-    }
+    
+    display: none; /* 隐藏披露条 */}
 }
 
 /* ============================================
@@ -872,7 +874,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 30px;
     text-align: center;
-    font-size: 13px;
+    font-size: 11px;
     color: rgba(255, 255, 255, 0.5);
     max-width: 900px;
     margin: 0 auto;
@@ -983,7 +985,8 @@ footer {
     .disclosure-bar {
         font-size: 12px;
         padding: 10px 16px;
-    }
+    
+    display: none; /* 隐藏披露条 */}
 }
 
 /* ============================================
@@ -1179,7 +1182,8 @@ footer {
         .disclosure-bar {
             font-size: 12px;
             padding: 10px 16px;
-        }
+        
+    display: none; /* 隐藏披露条 */}
     }
 
     /* ============================================
