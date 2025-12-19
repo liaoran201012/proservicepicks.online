@@ -498,7 +498,7 @@ document.addEventListener('click', function (e) {
 
             // 1. Send Old Conversion ID
             gtag('event', 'conversion', {
-                'send_to': 'AW-17297709178/Ms9MCNiY8NMBEPqwmLhA',
+                'send_to': 'AW-17297709178/Ms9MCNiY8NMbEPqwmLhA',
                 'event_callback': link.target !== '_blank' ? handleNavigation : undefined
             });
 
